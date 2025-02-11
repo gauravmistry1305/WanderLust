@@ -1,0 +1,21 @@
+
+   /* Footer styles */
+   .footer-item {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(45deg, #6a11cb, #2575fc);
+     padding: 1rem 2rem;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+     text-align: center;
+     width: 100%;;
+     margin-top: auto; /* Pushes footer to the bottom */
+   }
+   
+   .footer-item p {
+     font-family: "Merienda", serif;
+     color: white;
+     font-size: 16px;
+     font-weight: 500;
+   }
+   

@@ -1,0 +1,111 @@
+.contact{
+    justify-content: center;
+    justify-items: center;
+    background-color: aliceblue;
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+.contact h2{
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+
+/* General Styling */
+.container {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     max-width: 800px;
+     width: 100%;
+     margin: auto;
+     margin-bottom: 50px;
+ }
+ 
+ /* Image Container */
+ .image-container {
+     display: flex;
+     justify-content: center;
+     margin-bottom: 20px;
+ }
+ 
+ .image-container img {
+     width: 100%;
+     max-width: 400px;
+     border-radius: 8px;
+ }
+ 
+ /* Form Container */
+ .form-container {
+     width: 100%;
+     text-align: center;
+ }
+ 
+ .form-container h2 {
+     font-size: 24px;
+     color: #4a4a4a;
+     margin-bottom: 15px;
+ }
+ 
+ /* Form Inputs */
+ form input, form textarea {
+     width: 100%;
+     padding: 10px;
+     margin: 8px 0;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-size: 16px;
+ }
+ 
+ /* Textarea */
+ form textarea {
+     height: 100px;
+     resize: none;
+ }
+ 
+ /* Submit Button */
+ form button {
+     width: 100%;
+     background-color: #6b21a8;
+     color: white;
+     padding: 12px;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: 0.3s ease;
+ }
+ 
+ form button:hover {
+     background-color: #5a1a91;
+ }
+ 
+ /* Success Message */
+ .success-message {
+     color: green;
+     font-weight: bold;
+ }
+ 
+ /* Responsive Design */
+ @media (min-width: 768px) {
+     .container {
+         flex-direction: row;
+         align-items: flex-start;
+     }
+ 
+     .image-container {
+         flex: 1;
+         margin-bottom: 0;
+     }
+ 
+     .form-container {
+         flex: 1;
+         margin-left: 20px;
+     }
+ }
+ 
