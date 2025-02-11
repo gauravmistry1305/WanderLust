@@ -1,96 +1,239 @@
-.login-form{
-     font-family: 'Poppins', sans-serif;
-     background: linear-gradient(145deg, #d0a9f9, #2575fc);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     margin: 0;
- }
- 
- /* Form Container */
- form {
-     background: #fff;
-     padding: 30px;
-     border-radius: 10px;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-     width: 100%;
-     max-width: 400px;
-     text-align: center;
- }
- 
- /* Heading */
- h1 {
-     color: #333;
-     margin-bottom: 20px;
- }
- 
- /* Labels */
- label {
-     display: block;
-     font-size: 14px;
-     font-weight: 900;
-     color: #555;
-     text-align: left;
-     margin-top: 10px;
- }
- 
- /* Input Fields */
- input {
-     width: 100%;
-     padding: 10px;
-     margin-top: 5px;
-     border: 1px solid #ddd;
-     border-radius: 5px;
-     font-size: 14px;
-     transition: all 0.3s ease-in-out;
- }
- 
- /* Input Focus Effect */
- input:focus {
-     border-color: #2575fc;
-     box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
-     outline: none;
- }
- 
- /* Error Message */
- p {
-     color: red;
-     font-size: 12px;
-     margin-top: 5px;
- }
- 
- /* Submit Button */
- button {
-     background: #2575fc;
-     color: white;
-     padding: 12px;
-     border: none;
-     border-radius: 5px;
-     font-size: 16px;
-     cursor: pointer;
-     margin-top: 15px;
-     transition: all 0.3s ease;
-     width: 100%;
- }
- 
- button:hover {
-     background: #1a5dcc;
- }
- 
- /* Responsive Design */
- @media (max-width: 480px) {
-     form {
-         width: 90%;
-         padding: 20px;
-     }
- 
-     h1 {
-         font-size: 20px;
-     }
- 
-     button {
-         font-size: 14px;
-     }
- }
- 
+/* Background & Layout */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7b2cbf, #3b82f6);
+    padding: 20px;
+  }
+  
+  /* Main Box */
+  .login-box {
+    display: flex;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  @media (max-width: 768px) {
+    .login-box {
+      flex-direction: column;
+    }
+  }
+  
+  /* Left Side */
+  .login-left {
+    width: 50%;
+  }
+  
+  .login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .login-left {
+      width: 100%;
+    }
+    .login-image {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+  
+  /* Right Side */
+  .login-right {
+    padding: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .login-right {
+      width: 100%;
+      padding: 30px;
+    }
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .signup-link {
+    color: #7b2cbf;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .signup-link:hover {
+    color: #5a189a;
+    text-decoration: underline;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #444;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #7b2cbf;
+    box-shadow: 0 0 8px rgba(123, 44, 191, 0.2);
+  }
+  
+  /* Remember Me & Forgot Password */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-group label {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: #7b2cbf;
+    float: right;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .forgot-password:hover {
+    color: #5a189a;
+    text-decoration: underline;
+  }
+  
+  /* Buttons */
+  .login-btn {
+    width: 100%;
+    background: linear-gradient(to right, #7b2cbf, #3b82f6);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(123, 44, 191, 0.2);
+  }
+  
+  .login-btn:hover {
+    background: linear-gradient(to right, #5a189a, #1e40af);
+    box-shadow: 0 6px 15px rgba(123, 44, 191, 0.3);
+  }
+  
+  /* OR Divider */
+  .or-text {
+    text-align: center;
+    color: #888;
+    margin: 15px 0;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  .or-text::before,
+  .or-text::after {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    width: 45%;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .or-text::before {
+    left: 0;
+  }
+  
+  .or-text::after {
+    right: 0;
+  }
+  
+  /* Social Login */
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-btn {
+    width: 48%;
+    background: white;
+    border: 2px solid #ddd;
+    color: #333;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-btn:hover {
+    background: #f9f9f9;
+    border-color: #ccc;
+    transform: translateY(-2px);
+  }
+  
+  .google-btn i {
+    color: #ea4335;
+  }
+  
+  .facebook-btn i {
+    color: #1877f2;
+  }
+  
