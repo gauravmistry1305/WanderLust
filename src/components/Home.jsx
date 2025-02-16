@@ -8,6 +8,9 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+      <div className="home-container">
+        <h1></h1>
+      </div>
       <Destination /> {/* Added after About Us */}
       <Aboutus />
       <Contact />

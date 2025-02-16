@@ -1,48 +1,84 @@
 import { motion } from "framer-motion";
-import './Aboutus.css';
-// import { div } from "framer-motion/client";
+import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
     <div className="about">
-      <h2>Discover who we are :)</h2>
-    <div className="about-container">
-      <motion.div
-        className="about-card"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0}}
+      {/* Page Title */}
+      <motion.h2 
+        className="about-heading"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="about-title">
-          Welcome to <span className="about-highlight">Wanderlust Travel Agency</span>
-        </h2>
-        <p className="about-text">
-          At Wanderlust, we believe that travel is more than just visiting new places—it’s about creating experiences, 
-          embracing cultures, and making lifelong memories. Whether you&apos;re looking for a relaxing beach getaway, 
-          an adventurous mountain trek, or a customized itinerary filled with hidden gems, we’ve got you covered.
-        </p>
-        <div className="about-features">
-          <div className="about-feature">
-            <h3 className="feature-title">Personalized Itineraries</h3>
-            <p className="feature-text">Tailor-made trips to suit your travel style.</p>
+        Discover Who We Are 🌍✨
+      </motion.h2>
+
+      <div className="about-container">
+        {/* Animated Card */}
+        <motion.div
+          className="about-card"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="about-title">
+            Welcome to <span className="about-highlight">Wanderlust Travel Agency</span>
+          </h2>
+          <p className="about-text">
+            At Wanderlust, we turn your travel dreams into reality. Whether you&apos;re looking for a **romantic getaway, a thrilling adventure, or a relaxing beach escape**, we craft unforgettable experiences tailored to your needs. Our expert team ensures every trip is seamless, enjoyable, and stress-free.
+          </p>
+          
+          {/* Mission & Vision Section */}
+          <div className="about-mission">
+            <motion.div 
+              className="mission-card"
+              whileHover={{ scale: 1.05 }}
+            >
+              <h3>🌟 Our Mission</h3>
+              <p>To create **unforgettable travel experiences** that inspire and bring people closer to different cultures and destinations.</p>
+            </motion.div>
+
+            <motion.div 
+              className="vision-card"
+              whileHover={{ scale: 1.05 }}
+            >
+              <h3>🚀 Our Vision</h3>
+              <p>To become the **leading travel agency worldwide**, known for innovation, affordability, and top-tier service.</p>
+            </motion.div>
           </div>
-          <div className="about-feature">
-            <h3 className="feature-title">Hassle-Free Booking</h3>
-            <p className="feature-text">Seamless online booking with expert support.</p>
+
+          {/* Key Features */}
+          <div className="about-features">
+            <motion.div className="about-feature" whileHover={{ scale: 1.05 }}>
+              <h3 className="feature-title">📍 Personalized Itineraries</h3>
+              <p className="feature-text">Your journey, your way—custom travel plans crafted to match your style.</p>
+            </motion.div>
+            <motion.div className="about-feature" whileHover={{ scale: 1.05 }}>
+              <h3 className="feature-title">🛫 Hassle-Free Booking</h3>
+              <p className="feature-text">Seamless reservations with top travel deals and expert guidance.</p>
+            </motion.div>
+            <motion.div className="about-feature" whileHover={{ scale: 1.05 }}>
+              <h3 className="feature-title">💰 Best Deals & Discounts</h3>
+              <p className="feature-text">We bring you the best prices without compromising on quality.</p>
+            </motion.div>
+            <motion.div className="about-feature" whileHover={{ scale: 1.05 }}>
+              <h3 className="feature-title">☎ 24/7 Customer Support</h3>
+              <p className="feature-text">We’re here to assist you, anytime, anywhere.</p>
+            </motion.div>
           </div>
-          <div className="about-feature">
-            <h3 className="feature-title">Best Deals & Packages</h3>
-            <p className="feature-text">Affordable prices without compromising quality.</p>
-          </div>
-          <div className="about-feature">
-            <h3 className="feature-title">24/7 Customer Support</h3>
-            <p className="feature-text">Assistance whenever you need it.</p>
-          </div>
-        </div>
-        <button className="about-button">Start Your Journey</button>
-      </motion.div>
+
+          {/* CTA Button */}
+          <motion.button 
+            className="about-button"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Start Your Journey
+          </motion.button>
+        </motion.div>
       </div>
-      </div>
+    </div>
   );
 };
 
