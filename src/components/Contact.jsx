@@ -26,7 +26,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h2>CONTACT US</h2>
+      <h2>Contact Us</h2>
     <div className="container">
       {/* Left Side - Image */}
       <div className="image-container">

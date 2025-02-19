@@ -3,7 +3,7 @@
 /* Container for destinations */
 .destinations-container {
   text-align: center;
-  padding: 50px 20px;
+  padding: 10px 20px;
   background-color: aliceblue;
   min-height: 100vh;
   transition: filter 0.3s ease-in-out;
@@ -17,11 +17,13 @@
 
 /* Title styling */
 .destinations-title {
+  font-family: "Merienda", serif;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #ffce00;
+  text-shadow: 2px 2px 1px #333;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1.5px;
 }
 

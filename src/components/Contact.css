@@ -2,11 +2,14 @@
     justify-content: center;
     justify-items: center;
     background-color: aliceblue;
-    padding: 80px 20px;
+    padding-top: 30px;
     min-height: 100vh;
 }
 
 .contact h2{
+    font-family: "Merienda", serif;
+    color: #ffce00;
+    text-shadow: 2px 2px 1px #333;
     margin-bottom: 50px;
     font-size: 35px;
 }
