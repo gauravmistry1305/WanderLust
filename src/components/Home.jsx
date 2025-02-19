@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Aboutus from "./Aboutus";
@@ -6,6 +7,27 @@ import Destination from "./Destination";
 import "./Home.css";
 
 const Home = () => {
+  useEffect(() => {
+    // Intersection Observer for Scroll Animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-on-scroll");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const elements = document.querySelectorAll(
+      ".travel-box, .tourism-box, .travel-list, .travel-benefits"
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => elements.forEach((el) => observer.unobserve(el));
+  }, []);
+
   return (
     <div className="home-wrapper">
       <Navbar />
@@ -20,7 +42,7 @@ const Home = () => {
       {/* Travel Information Section */}
       <div className="info-section">
         <div className="info-container">
-          {/* Travel Section (Left Side) */}
+          {/* Travel Section */}
           <div className="travel-box">
             <h2>What is Travel?</h2>
             <p>
@@ -29,7 +51,7 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Tourism Section (Right Side) */}
+          {/* Tourism Section */}
           <div className="tourism-box">
             <h2>What is Tourism?</h2>
             <p>

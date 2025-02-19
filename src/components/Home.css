@@ -1,139 +1,182 @@
 /* Home Page Styling */
 .home-container {
-     display: flex;
-     background-color: aliceblue;
-     align-items: center;
-     justify-content: center;
-     color: white;
-     text-align: center;
-     padding: 10px;
- }
- 
- .hero-section h1 {
-     color: #ffce00;
-     text-shadow: 2px 2px 1px #333;
-     font-size: 2.8rem;
-     margin-bottom: 10px;
- }
- 
- /* Info Section */
- .info-section {
-     padding: 30px 70px;
-     text-align: left;
-     background-color: aliceblue;
-     margin-bottom: 10px;
- }
- 
- /* Two-Column Layout for Travel and Tourism */
- .info-container {
-     display: flex;
-     justify-content: space-between;
-     align-items: flex-start;
-     gap: 20px;
- }
- 
- .travel-box,
- .tourism-box {
-     flex: 1;
-     background: #fff;
-     padding: 20px;
-     border-radius: 8px;
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
- }
- 
- .travel-box h2,
- .tourism-box h2 {
-     color: #ff5733;
-     font-size: 2rem;
-     margin-bottom: 10px;
- }
- 
- .travel-box p,
- .tourism-box p {
-     font-size: 1.1rem;
-     color: #333;
-     line-height: 1.6;
- }
- 
- /* Two-Column Layout for Types of Travel */
- .travel-type-container {
-     display: flex;
-     justify-content: space-between;
-     gap: 20px;
-     padding: 10px;
- }
- 
- .travel-list {
-     list-style: none;
-     padding-left: 0;
-     flex: 1;
- }
- 
- .travel-list li {
-     background: #fff;
-     padding: 15px;
-     margin-bottom: 10px;
-     border-radius: 8px;
-     font-size: 1.1rem;
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
- }
- 
- .travel-list li strong {
-     color: #ff5733;
- }
- 
- /* Two-Column Layout for Importance of Travel */
- .travel-benefit-container {
-     display: flex;
-     justify-content: space-between;
-     gap: 20px;
-     padding: 10px;
- }
- 
- .travel-benefits {
-     list-style: none;
-     padding-left: 0;
-     flex: 1;
- }
- 
- .travel-benefits li {
-     background: #fff;
-     padding: 15px;
-     margin-bottom: 10px;
-     border-radius: 8px;
-     font-size: 1.1rem;
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
- }
- 
- .travel-benefits li strong {
-     color: #ff5733;
- }
- 
- /* Responsive */
- @media (max-width: 768px) {
-     .info-section {
-         padding: 30px;
-     }
- 
-     .hero-section {
-         padding: 30px;
-     }
- 
-     .hero-section h1 {
-         font-size: 2.2rem;
-     }
- 
-     .info-container,
-     .travel-type-container,
-     .travel-benefit-container {
-         flex-direction: column;
-     }
- 
-     .travel-box,
-     .tourism-box,
-     .travel-list,
-     .travel-benefits {
-         width: 100%;
-     }
- }
- 
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero-section h1 {
+    color: #ffce00;
+    text-shadow: 2px 2px 1px #333;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+/* Info Section */
+.info-section {
+    padding: 30px 70px;
+    text-align: left;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+}
+
+/* Two-Column Layout for Travel and Tourism */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.travel-box,
+.tourism-box {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.travel-box h2,
+.tourism-box h2 {
+    color: #ff5733;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.travel-box p,
+.tourism-box p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Types of Travel */
+.travel-type-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+
+.travel-list {
+    list-style: none;
+    padding-left: 0;
+    flex: 1;
+}
+
+.travel-list li {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.travel-list li strong {
+    color: #ff5733;
+}
+
+/* Importance of Travel */
+.travel-benefit-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+
+.travel-benefits {
+    list-style: none;
+    padding-left: 0;
+    flex: 1;
+}
+
+.travel-benefits li {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.travel-benefits li strong {
+    color: #ff5733;
+}
+
+/* Slide-in Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply Initial Styles */
+.travel-box, .travel-list {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.tourism-box, .travel-benefits {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+/* Active Class - When in View */
+.animate-on-scroll {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-section {
+        padding: 30px;
+    }
+
+    .hero-section {
+        padding: 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .info-container,
+    .travel-type-container,
+    .travel-benefit-container {
+        flex-direction: column;
+    }
+
+    .travel-box,
+    .tourism-box,
+    .travel-list,
+    .travel-benefits {
+        width: 100%;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
