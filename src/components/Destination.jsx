@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Destination.css";
-import { Link } from "react-router-dom";
 
 const destinations = [
   {
@@ -67,20 +66,13 @@ const PopularDestinations = () => {
       {selectedDestination && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close-btn" onClick={() => setSelectedDestination(null)}>
-              &times;
-            </span>
+            <span className="close-btn" onClick={() => setSelectedDestination(null)}>&times;</span>
             <img src={selectedDestination.image} alt={selectedDestination.name} />
             <h3>{selectedDestination.name}</h3>
             <p>{selectedDestination.description}</p>
           </div>
         </div>
       )}
-
-      {/* Button to navigate to '/md' */}
-      <Link to="/md">
-        <button className="more-destination">More Destinations</button>
-      </Link>
     </div>
   );
 };

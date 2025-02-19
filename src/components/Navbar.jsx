@@ -21,7 +21,7 @@ const Navbar = () => {
       <p className="logo">WanderLust</p>
       <ul className="nav-links">
         <li><Link to="/home">Home</Link></li>
-        <li><Link to="/destination">Destination</Link></li>
+        <li><Link to="/destinations">Destination</Link></li>
         <li><Link to="/packages">Packages</Link></li>
         <li><Link to="/car-rent">Car-Rent</Link></li>
         <li><Link to="/about">About Us</Link></li>
