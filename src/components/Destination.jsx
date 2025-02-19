@@ -72,7 +72,10 @@ const PopularDestinations = () => {
             <p>{selectedDestination.description}</p>
           </div>
         </div>
+        
       )}
+
+      <button className="more-destination">More Destination</button>
     </div>
   );
 };
