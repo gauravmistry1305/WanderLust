@@ -90,6 +90,25 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
+.more-destination{
+  width: 12%;
+  margin-top: -10px;
+  color: white;
+  /* text-shadow: 2px 2px 1px black; */
+background: linear-gradient(145deg, rgb(126, 126, 255), blue);
+  transition: all 0.3s ease-in-out;
+}
+
+.more-destination:hover{
+  text-align: center;
+  width: 12%;
+  margin-top: -10px;
+  color: white;
+  text-shadow: 2px 2px 1px black;
+  background: linear-gradient(145deg,blue, rgb(126, 126, 255));
+  transform: scale(1.05);
+}
+
 /* Modal fade-in animation */
 @keyframes fadeIn {
   from {
