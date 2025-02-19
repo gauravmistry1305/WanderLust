@@ -69,13 +69,13 @@ const AboutUs = () => {
           </div>
 
           {/* CTA Button */}
-          <motion.button 
+          {/* <motion.button 
             className="about-button"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
             Start Your Journey
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
     </div>
