@@ -20,15 +20,15 @@ const Navbar = () => {
     <nav className="navbar">
       <p className="logo">WanderLust</p>
       <ul className="nav-links">
-        <li><Link to="/home">Home</Link></li>
-        <li><Link to="/destinations">Destination</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/md">Destination</Link></li>
         <li><Link to="/packages">Packages</Link></li>
         <li><Link to="/car-rent">Car-Rent</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
 
         {!isLoggedIn ? (
-          <li className="login"><Link to="/login">Login/Register</Link></li>
+          <li className="login"><Link to="/login"> <h3>Login/Register</h3></Link></li>
         ) : (
           <li>
             <button className="logout-btn" onClick={handleLogout}>Logout</button>

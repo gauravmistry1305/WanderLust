@@ -1,6 +1,5 @@
 import { useState } from "react";
 import './Contact.css';
-
 const Contact = () => {
   // State for form fields
   const [formData, setFormData] = useState({
@@ -69,7 +68,8 @@ const Contact = () => {
             <button type="submit">SUBMIT</button>
           </form>
         )}
-      </div>
+        </div>
+        
       </div>
       </div>
   );

@@ -1,3 +1,206 @@
-.md{
-     color: antiquewhite;
-}
+/* MD.css */
+
+/* Container for destinations */
+.md-container {
+     text-align: center;
+     padding: 10px 20px;
+     background-color: aliceblue;
+     min-height: 100vh;
+     transition: filter 0.3s ease-in-out;
+   }
+   
+   /* Blur background when modal is open */
+   .blur-background {
+     pointer-events: auto; /* Ensures modal remains clickable */
+   }
+   
+   /* Title styling */
+   .md-title {
+     font-family: "Merienda", serif;
+     font-size: 2.5rem;
+     font-weight: bold;
+     color: #ffce00;
+     text-shadow: 2px 2px 1px #333;
+     margin-bottom: 10px;
+     letter-spacing: 1.5px;
+   }
+   
+   /* Grid layout for destination cards */
+   .md-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     justify-content: center;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding-bottom: 50px;
+   }
+   
+   /* Destination card styling */
+   .md-card {
+     background: white;
+     border-radius: 15px;
+     overflow: hidden;
+     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     cursor: pointer;
+     text-align: center;
+   }
+   
+   .md-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+   }
+   
+   /* Image styling in destination card */
+   .md-card img {
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+     transition: transform 0.3s ease-in-out;
+   }
+   
+   .md-card:hover img {
+     transform: scale(1.05);
+   }
+   
+   /* Destination name styling */
+   .md-card h3 {
+     font-size: 1.4rem;
+     color: #2563eb;
+     padding: 15px;
+     font-weight: bold;
+   }
+   
+   /* Modal Styling */
+   .md-modal {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 80%;
+     max-width: 500px;
+     background: white;
+     padding: 20px;
+     border-radius: 15px;
+     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+     text-align: justify;
+     z-index: 1100;
+     opacity: 1;
+     animation: fadeIn 0.3s ease-in-out;
+   }
+   
+   /* Button for more destinations */
+   .md-more-destination {
+     width: 12%;
+     margin-top: -10px;
+     color: white;
+     background: linear-gradient(145deg, rgb(126, 126, 255), blue);
+     transition: all 0.3s ease-in-out;
+   }
+   
+   .md-more-destination:hover {
+     text-align: center;
+     width: 12%;
+     margin-top: -10px;
+     color: white;
+     text-shadow: 2px 2px 1px black;
+     background: linear-gradient(145deg, blue, rgb(126, 126, 255));
+     transform: scale(1.05);
+   }
+   
+   /* Modal fade-in animation */
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+       transform: translate(-50%, -50%) scale(0.9);
+     }
+     to {
+       opacity: 1;
+       transform: translate(-50%, -50%) scale(1);
+     }
+   }
+   
+   /* Modal Image */
+   .md-modal-content img {
+     width: 100%;
+     height: 250px;
+     object-fit: cover;
+     border-radius: 10px;
+     transition: transform 0.3s ease-in-out;
+   }
+   
+   .md-modal-content img:hover {
+     transform: scale(1.02);
+   }
+   
+   /* Modal Title */
+   .md-modal-content h3 {
+     font-size: 1.8rem;
+     margin: 15px 0 10px;
+     color: #2563eb;
+     font-weight: bold;
+     letter-spacing: 1px;
+   }
+   
+   /* Modal Description */
+   .md-modal-content p {
+     font-size: 1rem;
+     color: #333;
+     padding: 0 15px;
+     line-height: 1.5;
+   }
+   
+   /* Close Button */
+   .md-close-btn {
+     position: absolute;
+     top: 10px;
+     right: 15px;
+     font-size: 28px;
+     cursor: pointer;
+     color: red;
+     font-weight: bold;
+     background: none;
+     border: none;
+     outline: none;
+     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+     z-index: 1200;
+   }
+   
+   .md-close-btn:hover {
+     color: darkred;
+     transform: scale(1.1);
+   }
+   
+   /* Responsive Design */
+   @media (max-width: 768px) {
+     .md-title {
+       font-size: 2rem;
+     }
+   
+     .md-grid {
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     }
+   
+     .md-modal {
+       width: 90%;
+       padding: 15px;
+     }
+   
+     .md-modal-content img {
+       height: 200px;
+     }
+   
+     .md-modal-content h3 {
+       font-size: 1.5rem;
+     }
+   
+     .md-modal-content p {
+       font-size: 0.9rem;
+     }
+   
+     .md-close-btn {
+       font-size: 24px;
+     }
+   }
+   

@@ -80,8 +80,13 @@
   transition: background 0.3s;
 }
 
-.login:hover {
+.login:hover li{
   background-color: #ffd000;
+}
+
+.login h3{
+  color: white;
+  font-size: 17px;
 }
 
 .logout-btn {

@@ -15,7 +15,7 @@ const Login = () => {
     // if (email === "test@example.com" && password === "password123") {
       localStorage.setItem("isLoggedIn", "true"); // Save login state
       alert("Login Successful");
-      navigate("/home"); // Redirect to home after login
+      navigate("/"); // Redirect to home after login
     // } else {
     //   setError("Invalid email or password.");
     // }
