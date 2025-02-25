@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./CarNav.css";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,10 +20,10 @@ const Navbar = () => {
     <nav className="navbar">
       <p className="logo">WanderLust</p>
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/md">Destination</Link></li>
-        <li><Link to="/packages">Packages</Link></li>
-        <li><Link to="/carrent">CarRent</Link></li>
+        <li><Link to="/carrent">Home</Link></li>
+        <li><Link to="/">Trip</Link></li>
+        <li><Link to="/cars">Cars</Link></li>
+        {/* <li><Link to="/packages">Packages</Link></li> */}
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
 

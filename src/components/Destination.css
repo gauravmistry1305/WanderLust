@@ -75,7 +75,7 @@
 }
 
 /* Modal Styling */
-.modal {
+.destimodal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -124,7 +124,7 @@ background: linear-gradient(145deg, rgb(126, 126, 255), blue);
 }
 
 /* Modal Image */
-.modal-content img {
+.destimodal-content img {
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -132,12 +132,12 @@ background: linear-gradient(145deg, rgb(126, 126, 255), blue);
   transition: transform 0.3s ease-in-out;
 }
 
-.modal-content img:hover {
+.destimodal-content img:hover {
   transform: scale(1.02);
 }
 
 /* Modal Title */
-.modal-content h3 {
+.destimodal-content h3 {
   font-size: 1.8rem;
   margin: 15px 0 10px;
   color: #2563eb;
@@ -146,7 +146,7 @@ background: linear-gradient(145deg, rgb(126, 126, 255), blue);
 }
 
 /* Modal Description */
-.modal-content p {
+.destimodal-content p {
   font-size: 1rem;
   color: #333;
   padding: 0 15px;
@@ -184,20 +184,20 @@ background: linear-gradient(145deg, rgb(126, 126, 255), blue);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .modal {
+  .destimodal {
     width: 90%;
     padding: 15px;
   }
 
-  .modal-content img {
+  .destimodal-content img {
     height: 200px;
   }
 
-  .modal-content h3 {
+  .destimodal-content h3 {
     font-size: 1.5rem;
   }
 
-  .modal-content p {
+  .destimodal-content p {
     font-size: 0.9rem;
   }
 

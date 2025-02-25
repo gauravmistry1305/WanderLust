@@ -64,8 +64,8 @@ const PopularDestinations = () => {
       </div>
 
       {selectedDestination && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="destimodal">
+          <div className="destimodal-content">
             <span className="close-btn" onClick={() => setSelectedDestination(null)}>&times;</span>
             <img src={selectedDestination.image} alt={selectedDestination.name} />
             <h3>{selectedDestination.name}</h3>
