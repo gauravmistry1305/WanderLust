@@ -89,13 +89,13 @@ const Packages = () => {
 
             <form className="booking-form" onSubmit={handleSubmit}>
               <label>Name:</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+              <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" required />
 
               <label>Email:</label>
-              <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" required />
 
               <label>Phone:</label>
-              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
+              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number" required />
 
               <label>Number of Travelers:</label>
               <input type="number" min="1" value={participants} onChange={(e) => setParticipants(e.target.value)} required />

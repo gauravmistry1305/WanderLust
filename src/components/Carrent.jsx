@@ -1,8 +1,10 @@
 import "./Carrent.css";
 import CarNav from './CarNav';
+import Footer from './Footer';
 
 const Carrent = () => {
   return (
+    <>
     <div className="bg-gray-100">     
          <CarNav/>
       <main>
@@ -26,7 +28,9 @@ const Carrent = () => {
           </p>
         </section>
       </main>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
