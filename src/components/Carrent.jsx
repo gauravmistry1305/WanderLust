@@ -6,13 +6,13 @@ const Carrent = () => {
   return (
     <>
       <CarNav />
-      <div className="carhero">
+      <div className="hero">
         <div className="carhome">
-        <div className="cartitle">
-          <h1 className="car">Welcome to WanderLust</h1>
-          <p className="car">Find and Book your dream ride with your loved one :)</p>
+          <div className="cartitle">
+            <h1>FIND THE IDEAL CAR FOR YOU.</h1>
+            <p>We have more cars for you to choose.</p>
           </div>
-          </div>
+        </div>
       </div>
       <Footer />
     </>
