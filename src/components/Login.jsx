@@ -26,8 +26,8 @@ const Login = () => {
       <div className="login-container">
         {/* Left Side - Image Section */}
         <div className="login-image">
-          <p className="login-text">Hey, Welcome back Buddy..</p>
-          <img src="/src/img/logo.jpg" alt="Login" />
+          <p className="login-text">Welcome back</p>
+          <img src="/src/img/register.jpg" alt="Login" />
         </div>
 
         {/* Right Side - Login Form */}

@@ -1,9 +1,9 @@
 /* General Page Styling */
 body {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
+  background: linear-gradient(90deg, #abe6ed , #415154);
   color: #333;
 }
 
@@ -14,8 +14,10 @@ body {
 }
 
 .packages-container h1 {
+  font-family: "Merienda", serif;
   font-size: 2rem;
-  color: #004080;
+  color: #ffce00;
+  text-shadow: 2px 2px 1px rgb(33, 33, 33);
   margin-bottom: 20px;
 }
 
@@ -65,6 +67,7 @@ body {
 /* Booking Button */
 .book-btn {
   display: inline-block;
+  width: 50%;
   padding: 10px 15px;
   margin: 15px;
   font-size: 1rem;
@@ -82,6 +85,7 @@ body {
 
 /* Booking Modal */
 .modal {
+  font-family: "Merienda", serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -108,7 +112,7 @@ body {
 /* Close Button */
 .close-btn {
   position: absolute;
-  top: 40px;
+  top: 2px;
   left: 485px;
   font-size: 1.5rem;
   cursor: pointer;

@@ -32,16 +32,16 @@ const destinations = [
     image: "/src/img/Mysore.jpg",
     description: "Mysore is known for its rich history and cultural heritage. Visit the majestic Mysore Palace, climb Chamundi Hills to see the Chamundeshwari Temple, and enjoy the stunning Brindavan Gardens’ musical fountain show. Shop for Mysore silk sarees and savor the delicious Mysore Pak sweet.",
   },
-  {
-    name: "Darjeeling",
-    image: "/src/img/DARJEELING.jpg",
-    description: "Darjeeling is known for its breathtaking views of the Himalayas, lush tea gardens, and the famous Toy Train. Visit Tiger Hill for a stunning sunrise over Kanchenjunga, explore the Batasia Loop, and sip world-famous Darjeeling tea at a local tea estate. Don't miss the Peace Pagoda for a serene experience.",
-  },
-  {
-    name: "Shimla",
-    image: "/src/img/Shimla.jpg",
-    description: "Shimla, the Queen of Hills, is a popular hill station with colonial charm. Walk along The Ridge, shop at Mall Road, and visit Jakhoo Temple for panoramic views. Enjoy skiing in Kufri during winter and take a scenic ride on the Kalka-Shimla Toy Train for a picturesque experience.",
-  },
+  // {
+  //   name: "Darjeeling",
+  //   image: "/src/img/DARJEELING.jpg",
+  //   description: "Darjeeling is known for its breathtaking views of the Himalayas, lush tea gardens, and the famous Toy Train. Visit Tiger Hill for a stunning sunrise over Kanchenjunga, explore the Batasia Loop, and sip world-famous Darjeeling tea at a local tea estate. Don't miss the Peace Pagoda for a serene experience.",
+  // },
+  // {
+  //   name: "Shimla",
+  //   image: "/src/img/Shimla.jpg",
+  //   description: "Shimla, the Queen of Hills, is a popular hill station with colonial charm. Walk along The Ridge, shop at Mall Road, and visit Jakhoo Temple for panoramic views. Enjoy skiing in Kufri during winter and take a scenic ride on the Kalka-Shimla Toy Train for a picturesque experience.",
+  // },
 ];
 
 const PopularDestinations = () => {

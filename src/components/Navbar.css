@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .navbar {
-/* background-color: #dcd7c941; */
-background: url("./src/img/navback.png") ;
+  background-image: linear-gradient(90deg, #abe6edba , #415154c3);
+/* background: url("./src/img/navback.png") ;
 background-repeat: no-repeat;
 background-position: right;
-background-size: cover;
+background-size: cover; */
 backdrop-filter: blur(10px);
 max-width: 100%;
 display: flex;

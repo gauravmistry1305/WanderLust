@@ -25,16 +25,16 @@ const Register = () => {
                 
                 {/* Left Section: Text + Image */}
                 <div className="register-left">
-                    <p className="register-message">Hey, you&apos;re just 2 steps away to book your dream journey!</p>
+                    <p className="register-message">Register yourself </p>
                     <div className="register-image">
-                        <img src="/src/img/logo.jpg" alt="Register" />
+                        <img src="/src/img/register.jpg" alt="Register" />
                     </div>
                 </div>
 
                 {/* Right Section: Registration Form */}
                 <div className="register-form">
                     <form onSubmit={handleSubmit}>
-                        <h1>User Registration</h1>
+                        <h1>User Sign-up</h1>
 
                         <label>First Name:</label>
                         <input type="text" name="firstname" id="firstname" required />
