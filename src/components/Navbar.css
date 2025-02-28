@@ -2,27 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Keeps items in the same line */
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+/* background-color: #dcd7c941; */
+background: url("./src/img/navback.png") ;
+background-repeat: no-repeat;
+background-position: right;
+background-size: cover;
+backdrop-filter: blur(10px);
+max-width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center; /* Keeps items in the same line */
+/* background: linear-gradient(45deg, #6a11cb, #2575fc); */
+padding: 1rem 2rem;
+
 }
 
 .logo {
   font-family: "Great Vibes", serif;
-  color: #ffce00;
+  /* color: #ffce00; */
+  color: #00779b;
   font-size: 40px;
   font-weight: bold;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 1px 1px  rgb(48, 48, 48); */
+  text-shadow: 1px 1px 1px #333;
+  letter-spacing: 4px;
 }
 
 .logo:hover{
-  color: #ffce00;
+  color: #00779b;
+  /* color: #ffce00; */
   scale: 1.1 ;
   transition: 0.3s;
-  text-shadow: #000000 5px 2px 2px;
+  /* text-shadow: #000000 1px 1px ; */
+  text-shadow: 1px 1px 1px #333;
+  cursor: pointer;
 
 }
 
@@ -45,13 +58,14 @@
 /* Remove the extra padding */
 .nav-links li a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   transition: color 0.3s;
 }
 
 /* Hover effect for links */
 .nav-links li a:hover {
-  color: #ffce00;
+  color: #00779b;
+  text-shadow: 1px 1px 1px #2b2b2b;
 }
 
 .nav-links li::after {
@@ -59,7 +73,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: white;
+  background: rgb(0, 0, 0);
   transition: width 0.3s;
   position: absolute;
   bottom: -5px;
@@ -73,7 +87,7 @@
 }
 
 .login {
-  background-color: #ffce00;
+  background-color: #00779b;;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   color: #333;
@@ -81,7 +95,7 @@
 }
 
 .login:hover li{
-  background-color: #ffd000;
+  background-color: #00779b;;
 }
 
 .login h3{

@@ -30,7 +30,7 @@ const Contact = () => {
       {/* Left Side - Image */}
       <div className="image-container">
         <img
-          src="https://storage.googleapis.com/a1aa/image/Ue0NIRK5-b49fKiaY4bcKVRl9m290lJtrijGbMH6kO4.jpg"
+          src="./src/img/contact.jpg"
           alt="Illustration of a woman working on a laptop"
         />
       </div>

@@ -48,7 +48,7 @@ const PopularDestinations = () => {
   const [selectedDestination, setSelectedDestination] = useState(null);
 
   return (
-    <div className={`destinations-container ${selectedDestination ? "blur-background" : ""}`}>
+    <div className={`destinations-container ${selectedDestination ? "blur-background" : ""}`} id="destinations">
       <h2 className="destinations-title">Popular Destinations in India</h2>
       <div className="destinations-grid">
         {destinations.map((destination, index) => (

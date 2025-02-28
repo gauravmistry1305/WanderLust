@@ -1,7 +1,7 @@
 .contact{
     justify-content: center;
     justify-items: center;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     padding-top: 30px;
     min-height: 100vh;
 }
