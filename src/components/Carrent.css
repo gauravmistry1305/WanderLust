@@ -1,3 +1,12 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Hero Section */
 .carhome {
   position: relative;
   width: 100%;
@@ -16,7 +25,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(50%) contrast(1.2);
   z-index: -1;
 }
 
@@ -28,120 +37,229 @@
 }
 
 .cartitle h1 {
+  font-size: 50px;
   color: #ffce00;
-  font-size: 45px;
+  font-family: "Merienda", serif;
   font-weight: bold;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 .cartitle p {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  font-family: "Merienda", serif;
 }
 
-/* Rental Benefits Section */
+/* Rental Benefits */
 .rental-benefits {
   text-align: center;
-  padding: 60px 20px;
-  background: #f8f8f8;
+  padding: 80px 20px;
+  background: #f5f5f5;
 }
 
 .rental-benefits h2 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 30px;
+  font-size: 38px;
+  margin-bottom: 35px;
 }
 
 .benefits-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.benefit {
-  max-width: 250px;
-  text-align: center;
-}
-
-.benefit img {
-  width: 170px;
-  height: 150px;
-}
-
-.benefit h3 {
-  font-size: 20px;
-  color: #444;
-  margin: 15px 0 10px;
-}
-
-.benefit p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* Featured Cars */
-.featured-cars {
-  text-align: center;
-  padding: 60px 20px;
-  background: #fff;
-}
-
-.featured-cars h2 {
-  font-size: 36px;
-  color: #222;
-  margin-bottom: 30px;
-}
-
-.cars-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.car-card {
-  background: #f0f0f0;
+.benefit {
+  max-width: 280px;
+  text-align: center;
+  background: white;
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
-  width: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
-.car-card:hover {
-  transform: scale(1.05);
+.benefit:hover {
+  transform: translateY(-5px);
 }
 
-.car-card img {
-  width: 100%;
-  height: 150px;
+.benefit img {
+  width: 180px;
+  height: 160px;
   border-radius: 10px;
 }
 
-.car-card h3 {
-  font-size: 20px;
-  color: #333;
-  margin-top: 15px;
+.benefit h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
 }
 
-.car-card p {
+.benefit p {
   font-size: 16px;
   color: #555;
 }
 
+/* Featured Cars */
+.featured-cars {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.featured-cars h2 {
+  font-size: 38px;
+  margin-bottom: 35px;
+}
+
+.cars-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.car-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 320px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.car-card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+}
+
 .car-card button {
-  margin-top: 10px;
-  padding: 10px 15px;
+  margin-top: 12px;
+  padding: 12px 18px;
   background: #ffce00;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
   transition: background 0.3s;
 }
 
 .car-card button:hover {
   background: #e0b200;
+}
+
+/* About Us */
+.about-us {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating Shapes for Decoration */
+.about-us::before,
+.about-us::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(2, 2, 2, 0.1);
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.about-us::before {
+  top: 10%;
+  left: -50px;
+}
+
+.about-us::after {
+  bottom: 10%;
+  right: -50px;
+}
+
+/* Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Image Section */
+.about-image img {
+  width: 420px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Content Section */
+.about-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffce00, #ff7f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: black;
+}
+
+/* Read More Button */
+.about-content .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ffce00;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.about-content .btn:hover {
+  background: #e0b200;
+  transform: translateY(-3px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

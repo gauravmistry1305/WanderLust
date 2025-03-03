@@ -49,7 +49,7 @@ const Carrent = () => {
         </div>
       </section>
 
-      {/* Featured Cars */}
+      {/* Featured Cars Section */}
       <section className="featured-cars">
         <h2>Our Featured Cars</h2>
         <div className="cars-container">
@@ -70,6 +70,28 @@ const Carrent = () => {
             <h3>Sports Car</h3>
             <p>High-speed performance for thrilling drives.</p>
             <button>Rent Now</button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="about-us">
+        <div className="about-container">
+          <div className="about-image">
+            <img src="./src/img/about.jpg" alt="About Us" />
+          </div>
+          <div className="about-content">
+            <h2>About Us</h2>
+            <p>
+              At <strong>WanderLust Car Rentals</strong>, we are committed to providing the best rental 
+              experience with a vast range of vehicles suited for every need. Whether you’re looking 
+              for a compact city car, a spacious SUV, or a luxury ride, we have you covered. 
+            </p>
+            <p>
+              Our mission is to make car rentals convenient, affordable, and hassle-free, 
+              ensuring your journey is smooth and enjoyable. With 24/7 customer support 
+              and well-maintained vehicles, we guarantee the best travel experience.
+            </p>
           </div>
         </div>
       </section>
