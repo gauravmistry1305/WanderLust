@@ -13,6 +13,7 @@ const Carrent = () => {
             <p>We have more cars for you to choose.</p>
           </div>
         </div>
+        hello
       </div>
       <Footer />
     </>

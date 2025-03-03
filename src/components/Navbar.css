@@ -2,36 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .navbar {
-  background-image: linear-gradient(90deg, #abe6edba , #415154c3);
-/* background: url("./src/img/navback.png") ;
-background-repeat: no-repeat;
-background-position: right;
-background-size: cover; */
-backdrop-filter: blur(10px);
-max-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center; /* Keeps items in the same line */
-/* background: linear-gradient(45deg, #6a11cb, #2575fc); */
-padding: 1rem 2rem;
+  /* background-image: linear-gradient(90deg, #19191936, #00000041); */
+  /* background: url("./src/img/navback.png"); */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  background-color: #00000034;
+  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(50px); */
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Keeps items in the same line */
+  /* background: linear-gradient(45deg, #6a11cb, #2575fc); */
+  padding: 1rem 2rem;
 
 }
 
 .logo {
   font-family: "Great Vibes", serif;
   /* color: #ffce00; */
-  color: #00779b;
+  color: #f6ff00;
+  /* color: #00779b; */
   font-size: 40px;
   font-weight: bold;
   /* text-shadow: 1px 1px  rgb(48, 48, 48); */
   text-shadow: 1px 1px 1px #333;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
-.logo:hover{
-  color: #00779b;
-  /* color: #ffce00; */
-  scale: 1.1 ;
+.logo:hover {
+  /* color: #00779b;   */
+  color: #ffce00;
+  scale: 1.1;
   transition: 0.3s;
   /* text-shadow: #000000 1px 1px ; */
   text-shadow: 1px 1px 1px #333;
@@ -42,7 +46,8 @@ padding: 1rem 2rem;
 .nav-links {
   list-style: none;
   display: flex;
-  align-items: center; /* Ensures all links are on the same line */
+  align-items: center;
+  /* Ensures all links are on the same line */
   gap: 1.5rem;
 }
 
@@ -58,13 +63,13 @@ padding: 1rem 2rem;
 /* Remove the extra padding */
 .nav-links li a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   transition: color 0.3s;
 }
 
 /* Hover effect for links */
 .nav-links li a:hover {
-  color: #00779b;
+  color: #f6ff00;
   text-shadow: 1px 1px 1px #2b2b2b;
 }
 
@@ -87,18 +92,20 @@ padding: 1rem 2rem;
 }
 
 .login {
-  background-color: #00779b;;
+  background-color: #00779b;
+  ;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   color: #333;
   transition: background 0.3s;
 }
 
-.login:hover li{
-  background-color: #00779b;;
+.login:hover li {
+  background-color: #00779b;
+  ;
 }
 
-.login h3{
+.login h3 {
   color: white;
   font-size: 17px;
 }
@@ -127,11 +134,13 @@ padding: 1rem 2rem;
     top: 60px;
     left: 0;
     right: 0;
-    display: none; /* Hide on mobile */
+    display: none;
+    /* Hide on mobile */
   }
 
   .navbar:hover .nav-links {
-    display: flex; /* Show on hover */
+    display: flex;
+    /* Show on hover */
   }
 
   .nav-links li {
@@ -141,7 +150,8 @@ padding: 1rem 2rem;
     text-align: center;
   }
 
-  .logout-btn, .login {
+  .logout-btn,
+  .login {
     width: 100%;
     text-align: center;
   }

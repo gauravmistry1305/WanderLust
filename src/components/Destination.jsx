@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import { Link } from "react-router-dom";
 import "./Destination.css";
 
 const destinations = [
@@ -47,6 +49,7 @@ const destinations = [
 const PopularDestinations = () => {
   const [selectedDestination, setSelectedDestination] = useState(null);
 
+
   return (
     <div className={`destinations-container ${selectedDestination ? "blur-background" : ""}`} id="destinations">
       <h2 className="destinations-title">Popular Destinations in India</h2>
@@ -72,10 +75,11 @@ const PopularDestinations = () => {
             <p>{selectedDestination.description}</p>
           </div>
         </div>
-        
-      )}
 
-      <button className="more-destination">More Destination</button>
+      )}
+      <div className="more-destination-btn">
+        <button><Link to="/md"> More Destination </Link></button>
+      </div>
     </div>
   );
 };

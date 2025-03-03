@@ -2,9 +2,9 @@
 body {
   margin: 0;
   padding: 0;
-  /* background: #f4f4f4; */
-  background: linear-gradient(90deg, #abe6ed , #415154);
+  background: linear-gradient(90deg, #abe6ed, #415154);
   color: #333;
+  font-family: Arial, sans-serif;
 }
 
 /* Container for packages */
@@ -15,17 +15,17 @@ body {
 
 .packages-container h1 {
   font-family: "Merienda", serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ffce00;
-  text-shadow: 2px 2px 1px rgb(33, 33, 33);
-  margin-bottom: 20px;
+  text-shadow: 2px 2px 3px rgb(33, 33, 33);
+  margin-bottom: 25px;
 }
 
 /* Packages Grid */
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -33,28 +33,29 @@ body {
 /* Individual Package Card */
 .package-card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .package-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Package Image */
 .package-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  border-bottom: 4px solid #ff6600;
 }
 
 /* Package Details */
 .package-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 15px 0;
   color: #004080;
 }
@@ -67,16 +68,16 @@ body {
 /* Booking Button */
 .book-btn {
   display: inline-block;
-  width: 50%;
-  padding: 10px 15px;
-  margin: 15px;
+  width: 60%;
+  padding: 12px;
+  margin: 15px 0;
   font-size: 1rem;
   background: #ff6600;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease;
 }
 
 .book-btn:hover {
@@ -100,24 +101,26 @@ body {
 
 .modal-content {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
   width: 90%;
+  height: 80%;
   max-width: 500px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
 }
 
 /* Close Button */
-.close-btn {
+.p-close-btn {
   position: absolute;
-  top: 2px;
-  left: 485px;
-  font-size: 1.5rem;
+  top: 60px;
+  right: 535px;
+  font-size: 1.8rem;
   cursor: pointer;
   color: #ff0000;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .close-btn:hover {
@@ -128,7 +131,7 @@ body {
 .booking-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   margin-top: 10px;
 }
 
@@ -139,9 +142,9 @@ body {
 
 .booking-form input {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
 }
 
@@ -149,12 +152,12 @@ body {
 .submit-btn {
   background: #28a745;
   color: white;
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease;
 }
 
 .submit-btn:hover {
@@ -176,11 +179,11 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .packages-container h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .package-card h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .book-btn {
@@ -188,6 +191,6 @@ body {
   }
 
   .modal-content {
-    width: 90%;
+    width: 95%;
   }
 }
