@@ -1,25 +1,147 @@
-.carhome{
-  background-image: url("./src/img/carimg.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
+.carhome {
+  position: relative;
   width: 100%;
-  height: 89vh;
-  padding-top: 40px;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cartitle h1{
-  padding-top: 20px;
+/* Background Video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  z-index: -1;
+}
+
+/* Hero Title */
+.cartitle {
+  position: relative;
+  text-align: center;
   color: #ffce00;
-  font-size: 40px;
-  font-family: "Merienda", serif;
-  text-shadow: 2px 2px 2px rgb(33, 33, 33);
+}
+
+.cartitle h1 {
+  color: #ffce00;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cartitle p {
+  font-size: 22px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Rental Benefits Section */
+.rental-benefits {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+.rental-benefits h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.benefit {
+  max-width: 250px;
   text-align: center;
 }
 
-.cartitle p{
-  font-size: 25px;
+.benefit img {
+  width: 170px;
+  height: 150px;
+}
+
+.benefit h3 {
+  font-size: 20px;
+  color: #444;
+  margin: 15px 0 10px;
+}
+
+.benefit p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Featured Cars */
+.featured-cars {
   text-align: center;
-  color: #ffce00;
-  font-family: "Merienda", serif;
-  text-shadow: 2px 2px 2px rgb(33, 33, 33);
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.featured-cars h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.cars-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.car-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+}
+
+.car-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.car-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.car-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.car-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ffce00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.car-card button:hover {
+  background: #e0b200;
 }
