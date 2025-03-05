@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./MD.css";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const destinations = [
   { name: "Goa", image: "https://cdn.pixabay.com/photo/2017/01/20/00/30/beach-1993704_1280.jpg", description: "Goa – Known for its stunning beaches, vibrant nightlife, and Portuguese heritage, Goa is a paradise for tourists. It offers adventure sports like parasailing, jet skiing, and scuba diving. North Goa is famous for its party culture, while South Goa is known for serene beaches and luxury resorts. Historic churches, spice plantations, and delicious seafood add to its charm.." },
@@ -84,7 +85,12 @@ const MD = () => {
               <h3>{selectedDestination.name}</h3>
               <p>{selectedDestination.description}</p>
             </div>
+            <div className="package-btn">
+              <button><Link to="/packages">Book Now</Link></button>
+            </div>
           </div>
+          
+
         )}
       </div>
     </>

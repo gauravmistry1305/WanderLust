@@ -53,7 +53,7 @@ const Carrent = () => {
       {/* Featured Cars Section */}
       <section className="featured-cars">
         <h2>Our Featured Cars</h2>
-        <div className="cars-container">
+        <div className="car-container">
           <div className="car-card">
             <img src="./src/img/sedan.jpg" alt="Sedan Car" />
             <h3>Luxury Sedan</h3>
