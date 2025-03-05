@@ -1,64 +1,170 @@
 .cars-container {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-     gap: 20px;
-     padding: 40px;
-     justify-content: center;
-   }
-   
-   .car-card {
-     background: #fff;
-     border-radius: 15px;
-     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-     overflow: hidden;
-     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-     text-align: center;
-     padding-bottom: 15px;
-   }
-   
-   .car-card:hover {
-     transform: scale(1.05);
-     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-   }
-   
-   .car-card img {
-     width: 100%;
-     height: 200px;
-     object-fit: cover;
-     border-bottom: 2px solid #ff5a5f;
-   }
-   
-   .car-card h3 {
-     font-size: 1.5rem;
-     margin: 10px 0;
-   }
-   
-   .specs {
-     color: #555;
-     font-size: 1rem;
-     padding: 5px;
-   }
-   
-   .price {
-     font-size: 1.2rem;
-     font-weight: bold;
-     color: #ff5a5f;
-     margin: 5px 0;
-   }
-   
-   .rent-btn {
-     background: #ff5a5f;
-     color: #333;
-     border: none;
-     padding: 10px 20px;
-     font-size: 1rem;
-     cursor: pointer;
-     transition: 0.3s ease-in-out;
-     margin-bottom: 15px;
-     border-radius: 5px;
-   }
-   
-   .rent-btn:hover {
-     background: #e0484d;
-   }
-   
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.car-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.car-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid #ff5a5f;
+}
+
+.car-card h3 {
+  font-size: 1.6rem;
+  margin: 15px 0 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.specs {
+  color: #666;
+  font-size: 1rem;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff5a5f;
+  margin: 10px 0;
+}
+
+.rent-btn {
+  background: linear-gradient(135deg, #ff5a5f, #e0484d);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  outline: none;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.rent-btn:hover {
+  background: linear-gradient(135deg, #e0484d, #c9373f);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: fixed;
+  /* top: 50%; */
+  /* left: 50%; */
+  align-items: center;
+  /* transform: translate(-50%, -50%); */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* max-width: 90%; */
+  width: 300px;
+  text-align: center;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal-content {
+  padding: 10px;;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff5a5f;
+}
+
+@media (max-width: 768px) {
+  .cars-container {
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .car-card {
+    padding-bottom: 15px;
+  }
+
+  .car-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .specs {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .rent-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cars-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .car-card {
+    padding-bottom: 10px;
+  }
+
+  .car-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .specs {
+    font-size: 0.85rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .rent-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
