@@ -1,6 +1,7 @@
 import "./Carrent.css";
 import CarNav from './CarNav';
 import Footer from './Footer';
+import {Link} from 'react-router-dom';
 
 const Carrent = () => {
   return (
@@ -57,19 +58,19 @@ const Carrent = () => {
             <img src="./src/img/sedan.jpg" alt="Sedan Car" />
             <h3>Luxury Sedan</h3>
             <p>Comfortable & stylish, perfect for city rides.</p>
-            <button>Rent Now</button>
+            <button><Link to="/cars">Rent Now</Link></button>
           </div>
           <div className="car-card">
             <img src="./src/img/suv1.jpg" alt="SUV Car" />
             <h3>Spacious SUV</h3>
             <p>Great for family trips & off-road adventures.</p>
-            <button>Rent Now</button>
+            <button><Link to="/cars">Rent Now</Link></button>
           </div>
           <div className="car-card">
             <img src="./src/img/sports.jpg" alt="Sports Car" />
             <h3>Sports Car</h3>
             <p>High-speed performance for thrilling drives.</p>
-            <button>Rent Now</button>
+            <button><Link to="/cars">Rent Now</Link></button>
           </div>
         </div>
       </section>

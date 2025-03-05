@@ -6,6 +6,7 @@ import Carrent from "./components/Carrent";
 import Aboutus from "./components/Aboutus";
 import Contact from "./components/Contact";
 import MD from "./components/MD";
+import Cars from "./components/Cars";
 import Packages from "./components/Packages";
 import './App.css';
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/md' element={<MD />} />
         <Route path='/packages' element={<Packages />} />
         <Route path='/carrent' element={<Carrent />} />
+        <Route path='/cars' element={<Cars />} />
         <Route path='/about' element={<Aboutus />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
