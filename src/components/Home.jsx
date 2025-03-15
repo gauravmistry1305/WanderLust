@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Aboutus from "./Aboutus";
 import Contact from "./Contact";
 import Destination from "./Destination";
+import Hpackage from "./Hpackage";
 // import { useState } from "react";
 import "./Home.css";
 
@@ -37,6 +38,7 @@ const Home = () => {
       <div className="home-container">
         <div className="hero-section">
           <h1>Welcome to WanderLust</h1>
+          <p>Let&apos;s find your dream trip..</p>
         </div>
       </div>
 
@@ -95,6 +97,7 @@ const Home = () => {
 
       {/* Other Sections */}
       <Destination />
+      <Hpackage/>
       <Aboutus />
       <Contact />
       <Footer />

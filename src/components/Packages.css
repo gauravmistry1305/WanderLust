@@ -115,15 +115,15 @@ body {
 /* Close Button */
 .p-close-btn {
   position: absolute;
-  top: 60px;
-  right: 535px;
+  top: 75px;
+  right: 525px;
   font-size: 1.8rem;
   cursor: pointer;
   color: #ff0000;
   transition: color 0.3s ease;
 }
 
-.close-btn:hover {
+.p-close-btn:hover {
   color: #cc0000;
 }
 

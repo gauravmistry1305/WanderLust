@@ -1,33 +1,46 @@
 import "./Cars.css";
 import CarNav from "./CarNav";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const carData = [
-  { name: "Maruti Suzuki Swift", image: "./src/img/swift.webp", specs: "Petrol | 22 kmpl | 5-Seater | Automatic/Manual", price: "₹300/hr" },
-  { name: "Hyundai i20", image: "./src/img/i20.jpg", specs: "Petrol | 20 kmpl | 5-Seater | Sunroof Option", price: "₹320/hr" },
-  { name: "Tata Altroz", image: "./src/img/altroz.webp", specs: "Diesel/Petrol | 22-25 kmpl | 5-Star Safety", price: "₹280/hr" },
-  { name: "Volkswagen Polo", image: "./src/img/polo.jpg", specs: "Turbo Petrol | 18 kmpl | 5-Seater | Performance Hatch", price: "₹350/hr" },
-  { name: "Renault Kwid", image: "./src/img/kwid.webp", specs: "Petrol | 21 kmpl | 5-Seater | Budget-Friendly", price: "₹250/hr" },
-  { name: "Honda City", image: "./src/img/hondacity.webp", specs: "Petrol | 18 kmpl | 5-Seater | Premium Sedan", price: "₹500/hr" },
-  { name: "Hyundai Verna", image: "./src/img/verna.webp", specs: "Turbo Petrol | 20 kmpl | Stylish & Feature-Rich", price: "₹520/hr" },
-  { name: "Maruti Suzuki Ciaz", image: "./src/img/ciaz.png", specs: "Mild-Hybrid | 21 kmpl | Spacious Sedan", price: "₹480/hr" },
-  { name: "Skoda Slavia", image: "./src/img/slavia.jpg", specs: "Turbo Petrol | 19 kmpl | German Engineering", price: "₹550/hr" },
-  { name: "Toyota Camry Hybrid", image: "./src/img/camry.jpg", specs: "Hybrid | 22 kmpl | Luxury & Comfort", price: "₹750/hr" },
-  { name: "Mahindra Thar", image: "./src/img/thar.webp", specs: "Diesel | 15 kmpl | 4x4 | Off-Roader", price: "₹800/hr" },
-  { name: "Tata Harrier", image: "./src/img/harrier.jpg", specs: "Diesel | 16 kmpl | SUV | 5-Star Safety", price: "₹750/hr" },
-  { name: "Hyundai Creta", image: "./src/img/creta.webp", specs: "Petrol/Diesel | 19 kmpl | Best-Selling SUV", price: "₹700/hr" },
-  { name: "Kia Seltos", image: "./src/img/seltos.jpg", specs: "Turbo Petrol | 18 kmpl | Sporty SUV", price: "₹720/hr" },
-  { name: "MG Hector", image: "./src/img/hector.webp", specs: "Hybrid | 15 kmpl | AI-Enabled SUV", price: "₹780/hr" },
-  { name: "Toyota Fortuner", image: "./src/img/fortuner.webp", specs: "Diesel | 12 kmpl | Premium 7-Seater SUV", price: "₹1,200/hr" },
-  { name: "Mahindra XUV700", image: "./src/img/xuv700.webp", specs: "Diesel/Petrol | 14 kmpl | ADAS Features", price: "₹950/hr" },
-  { name: "Tata Nexon EV", image: "./src/img/nexon.jpg", specs: "Electric | 325 km Range | Fast Charging", price: "₹550/hr" },
-  { name: "MG ZS EV", image: "./src/img/zs.webp", specs: "Electric | 419 km Range | SUV Design", price: "₹600/hr" },
-  { name: "Hyundai Kona EV", image: "./src/img/kona.webp", specs: "Electric | 452 km Range | Premium EV", price: "₹620/hr" }
+  { name: "Maruti Suzuki Swift", image: "./src/img/swift.webp", specs: "Petrol | 22 kmpl | 5-Seater | Automatic/Manual", price: "₹500/day" },
+  { name: "Hyundai i20", image: "./src/img/i20.jpg", specs: "Petrol | 20 kmpl | 5-Seater | Sunroof Option", price: "₹620/day" },
+  { name: "Tata Altroz", image: "./src/img/altroz.webp", specs: "Diesel/Petrol | 22-25 kmpl | 5-Star Safety", price: "₹580/day" },
+  { name: "Volkswagen Polo", image: "./src/img/polo.jpg", specs: "Turbo Petrol | 18 kmpl | 5-Seater | Performance Hatch", price: "₹700/day" },
+  { name: "Renault Kwid", image: "./src/img/kwid.webp", specs: "Petrol | 21 kmpl | 5-Seater | Budget-Friendly", price: "₹550/day" },
+  { name: "Honda City", image: "./src/img/hondacity.webp", specs: "Petrol | 18 kmpl | 5-Seater | Premium Sedan", price: "₹700/day" },
+  { name: "Hyundai Verna", image: "./src/img/verna.webp", specs: "Turbo Petrol | 20 kmpl | Stylish & Feature-Rich", price: "₹800/day" },
+  { name: "Maruti Suzuki Ciaz", image: "./src/img/ciaz.png", specs: "Mild-Hybrid | 21 kmpl | Spacious Sedan", price: "₹650/day" },
+  { name: "Skoda Slavia", image: "./src/img/slavia.jpg", specs: "Turbo Petrol | 19 kmpl | German Engineering", price: "₹700/day" },
+  { name: "Toyota Camry Hybrid", image: "./src/img/camry.jpg", specs: "Hybrid | 22 kmpl | Luxury & Comfort", price: "₹1000/day" },
+  { name: "Mahindra Thar", image: "./src/img/thar.webp", specs: "Diesel | 15 kmpl | 4x4 | Off-Roader", price: "₹1400/day" },
+  { name: "Tata Harrier", image: "./src/img/harrier.jpg", specs: "Diesel | 16 kmpl | SUV | 5-Star Safety", price: "₹1650/day" },
+  { name: "Hyundai Creta", image: "./src/img/creta.webp", specs: "Petrol/Diesel | 19 kmpl | Best-Selling SUV", price: "₹1500/day" },
+  { name: "Kia Seltos", image: "./src/img/seltos.jpg", specs: "Turbo Petrol | 18 kmpl | Sporty SUV", price: "₹1400/day" },
+  { name: "MG Hector", image: "./src/img/hector.webp", specs: "Hybrid | 15 kmpl | AI-Enabled SUV", price: "₹1500/day" },
+  { name: "Toyota Fortuner", image: "./src/img/fortuner.webp", specs: "Diesel | 12 kmpl | Premium 7-Seater SUV", price: "₹2000/day" },
+  { name: "Mahindra XUV700", image: "./src/img/xuv700.webp", specs: "Diesel/Petrol | 14 kmpl | ADAS Features", price: "₹2000/day" },
+  { name: "Tata Nexon EV", image: "./src/img/nexon.jpg", specs: "Electric | 325 km Range | Fast Charging", price: "₹1100/day" },
+  { name: "MG ZS EV", image: "./src/img/zs.webp", specs: "Electric | 419 km Range | SUV Design", price: "₹800/day" },
+  { name: "Hyundai Kona EV", image: "./src/img/kona.webp", specs: "Electric | 452 km Range | Premium EV", price: "₹700/day" }
 ];
 
 const Cars = () => {
   const [selectedCar, setSelectedCar] = useState(null);
   const [fromDate, setFromDate] = useState("");
+  const isLoggedIn = localStorage.getItem("isLoggedIn"); // Check if user is logged in
+  const navigate = useNavigate(); // React Router hook for navigation
+
+  // Handle booking
+  const handleBooking = (car) => {
+    if (!isLoggedIn) {
+      alert("You must be logged in to book a car!");
+      navigate("/login"); // Redirect to login page
+      return;
+    }
+    setSelectedCar(car); // Open modal if logged in
+  };
 
   return (
     <>
@@ -39,11 +52,12 @@ const Cars = () => {
             <h3>{car.name}</h3>
             <p className="specs">{car.specs}</p>
             <p className="price">{car.price}</p>
-            <button className="rent-btn" onClick={() => setSelectedCar(car)}>Details</button>
+            <button className="rent-btn" onClick={() => handleBooking(car)}>Details</button>
           </div>
         ))}
       </div>
 
+      {/* Modal for car details */}
       {selectedCar && (
         <div className="modal">
           <div className="modal-content">
@@ -59,6 +73,7 @@ const Cars = () => {
               <form>
                 <input type="text" placeholder="Full Name" required />
                 <input type="email" placeholder="Email" required />
+                <input type="number" placeholder="Number"  required />
                 <input
                   type="date"
                   placeholder="Start Date"
