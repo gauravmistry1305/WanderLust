@@ -29,17 +29,31 @@ const carData = [
 const Cars = () => {
   const [selectedCar, setSelectedCar] = useState(null);
   const [fromDate, setFromDate] = useState("");
-  const isLoggedIn = localStorage.getItem("isLoggedIn"); // Check if user is logged in
-  const navigate = useNavigate(); // React Router hook for navigation
+  const [toDate, setToDate] = useState("");
+  const [participants, setParticipants] = useState(1); // State for number of participants
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const navigate = useNavigate();
 
   // Handle booking
   const handleBooking = (car) => {
     if (!isLoggedIn) {
       alert("You must be logged in to book a car!");
-      navigate("/login"); // Redirect to login page
+      navigate("/login");
       return;
     }
-    setSelectedCar(car); // Open modal if logged in
+    setSelectedCar(car);
+  };
+
+  // Calculate total price
+  const calculateTotalPrice = () => {
+    if (!fromDate || !toDate) return 0;
+
+    const start = new Date(fromDate);
+    const end = new Date(toDate);
+    const days = (end - start) / (1000 * 60 * 60 * 24); // Calculate difference in days
+    const pricePerDay = parseInt(selectedCar.price.replace(/[^\d]/g, "")); // Extract numeric price
+
+    return days > 0 ? pricePerDay * days * participants : 0; // Calculate total price
   };
 
   return (
@@ -73,20 +87,39 @@ const Cars = () => {
               <form>
                 <input type="text" placeholder="Full Name" required />
                 <input type="email" placeholder="Email" required />
-                <input type="number" placeholder="Number"  required />
+                <input type="tel" placeholder="Phone Number" required />
+
+                {/* Start Date */}
                 <input
                   type="date"
-                  placeholder="Start Date"
                   required
+                  value={fromDate}
                   onChange={(e) => setFromDate(e.target.value)}
-                  min={new Date().toISOString().split("T")[0]} // Prevent past dates
+                  min={new Date().toISOString().split("T")[0]}
                 />
+
+                {/* End Date */}
                 <input
                   type="date"
-                  placeholder="End Date"
                   required
+                  value={toDate}
+                  onChange={(e) => setToDate(e.target.value)}
                   min={fromDate ? new Date(new Date(fromDate).getTime() + 86400000).toISOString().split("T")[0] : ""}
                 />
+
+                {/* Number of Participants */}
+                {/* <input
+                  type="number"
+                  min="1"
+                  value={participants}
+                  onChange={(e) => setParticipants(parseInt(e.target.value) || 1)}
+                  placeholder="Number of Travelers"
+                  required
+                /> */}
+
+                {/* Display Total Price */}
+                <p><strong>Total Price:</strong> ₹{calculateTotalPrice().toLocaleString()}</p>
+
                 <button type="submit" className="rent-btn">Confirm Booking</button>
               </form>
             </div>

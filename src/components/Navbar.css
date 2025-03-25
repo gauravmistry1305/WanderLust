@@ -69,7 +69,8 @@
 
 /* Hover effect for links */
 .nav-links li a:hover {
-  color: #f6ff00;
+  /* color: #f6ff00; */
+  /* color: #f6ff00;   */
   text-shadow: 1px 1px 1px #2b2b2b;
 }
 
@@ -78,7 +79,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: rgb(0, 0, 0);
+  background: rgb(238, 238, 238);
   transition: width 0.3s;
   position: absolute;
   bottom: -5px;
