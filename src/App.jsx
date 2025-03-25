@@ -21,22 +21,22 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/md' element={<MD />} />
-        <Route path='/packages' element={<Packages />} />
-        <Route path='/carrent' element={<Carrent />} />
-        <Route path='/cars' element={<Cars />} />
-        <Route path='/about' element={<Aboutus />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/admin' element={<Admin />} />
-        <Route path='/TripManage' element={<TripManage />} />
-        <Route path='/CarsManage' element={<CarsManage />} />
-        <Route path='/Bookings' element={<Bookings />} />
-        <Route path='/Settings' element={<Settings />} />
-        <Route path='/Messages' element={<Messages />} />
-        <Route path='/UsersManage' element={<UsersManage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/md" element={<MD />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/carrent" element={<Carrent />} />
+        <Route path="/cars" element={<Cars />} />
+        <Route path="/about" element={<Aboutus />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/tripManage" element={<TripManage />} />
+        <Route path="/carsManage" element={<CarsManage />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/usersManage" element={<UsersManage />} />
       </Routes>
     </Router>
   );
