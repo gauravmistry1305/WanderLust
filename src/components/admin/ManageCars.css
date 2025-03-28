@@ -1,0 +1,51 @@
+.cars-container {
+     padding: 20px;
+     background: #f8fafc;
+     min-height: 100vh;
+   }
+   
+   .car-form {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+   }
+   
+   .car-form input {
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+   }
+   
+   .car-form button {
+     background: #10b981;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   
+   .car-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+   }
+   
+   .car-card {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     width: 200px;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+   }
+   
+   .car-card button {
+     background: #ef4444;
+     color: white;
+     border: none;
+     padding: 5px 10px;
+     border-radius: 5px;
+     margin-top: 10px;
+     cursor: pointer;
+   }
+   

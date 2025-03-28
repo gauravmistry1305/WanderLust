@@ -1,0 +1,51 @@
+.trips-container {
+     padding: 20px;
+     background: #f1f5f9;
+     min-height: 100vh;
+   }
+   
+   .trip-form {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+   }
+   
+   .trip-form input {
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+   }
+   
+   .trip-form button {
+     background: #3b82f6;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   
+   .trip-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+   }
+   
+   .trip-card {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     width: 200px;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+   }
+   
+   .trip-card button {
+     background: #ef4444;
+     color: white;
+     border: none;
+     padding: 5px 10px;
+     border-radius: 5px;
+     margin-top: 10px;
+     cursor: pointer;
+   }
+   
