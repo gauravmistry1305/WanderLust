@@ -1,0 +1,140 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #6b46c1, #ff6a00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container */
+.register-container {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Form Side */
+.form-container {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h2 {
+    color: #e3342f;
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    border-color: #e3342f;
+    box-shadow: 0 0 5px rgba(227, 52, 47, 0.5);
+    outline: none;
+}
+
+/* Button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #e3342f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-btn:hover {
+    background: #cc1f1a;
+}
+
+/* Login link */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #e3342f;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Image Side */
+.image-container {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        order: -1;
+        border-radius: 10px 10px 0 0;
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .form-container h2 {
+        font-size: 22px;
+    }
+
+    .register-btn {
+        font-size: 15px;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 15px;
+    }
+}

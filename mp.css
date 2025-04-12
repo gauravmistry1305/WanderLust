@@ -1,0 +1,239 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+ }
+
+ /* Navbar */
+.navbar {
+     background: #007bff;
+     padding: 10px 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     transition: 0.3s;
+}
+
+/* .navbar:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+} */
+
+.logo {
+     font-size: 34px;
+     font-family: "Courgette", cursive;
+     color: #fff200;
+     cursor: pointer;
+     transition: transform 0.3s;
+}
+
+.logo:hover {
+     transform:  scale(1.1);
+}
+
+.navbar ul {
+     list-style: none;
+     display: flex;
+     gap: 15px;
+     padding: 0;
+}
+
+.navbar ul li a {
+     color: white;
+     text-decoration: none;
+     font-size: 15px;
+     font-family: "Merienda", cursive;
+     transition: 0.3s;
+     position: relative;
+}
+
+.navbar ul li a:hover {
+     color: #ffdd57;
+     text-decoration: none;
+     transform: scale(1.1);
+}
+
+/* Button Styling */
+.btn {
+     background: #ffdd57;
+     color: #343a40;
+     padding: 10px 20px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: 0.3s;
+}
+
+.btn:hover {
+     background: #54626f;
+     color: #ffdd57;
+     transform: scale(1.1);
+}
+
+ 
+ /* Package card styles */
+
+
+
+ .packages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.package-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.package-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.package-title {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.package-price {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.package-card button {
+    padding: 10px 15px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.package-card button:hover {
+    background-color: #00796b;
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #111827;
+    text-align: center;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="number"],
+.modal-content input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+}
+
+.modal-content input:focus {
+    border-color: #2563eb;
+}
+
+.modal-content button {
+    background-color: #10b981;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #059669;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .package-card {
+        max-width: 100%;
+    }
+}

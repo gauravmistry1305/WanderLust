@@ -1,0 +1,554 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f8f8f8;
+}
+
+
+/* Navbar */
+.navbar {
+     background: #007bff;
+     padding: 10px 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     position: relative;
+     top: 0;
+     z-index: 1000;
+     transition: 0.3s;
+}
+
+/* .navbar:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+} */
+
+.logo {
+     font-size: 34px;
+     font-family: "Courgette", cursive;
+     color: #fff200;
+     cursor: pointer;
+     transition: transform 0.3s;
+}
+
+.logo:hover {
+     transform: rotate(5deg) scale(1.1);
+}
+
+.navbar ul {
+     list-style: none;
+     display: flex;
+     gap: 15px;
+     padding: 0;
+}
+
+.navbar ul li a {
+     color: white;
+     text-decoration: none;
+     font-size: 15px;
+     font-family: "Merienda", cursive;
+     transition: 0.3s;
+     position: relative;
+}
+
+.navbar ul li a:hover {
+     color: #ffdd57;
+     text-decoration: none;
+     transform: scale(1.1);
+}
+
+/* Button Styling */
+.btn {
+     background: #ffdd57;
+     color: #343a40;
+     padding: 10px 20px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: 0.3s;
+}
+
+.btn:hover {
+     background: #54626f;
+     color: #ffdd57;
+     transform: scale(1.1);
+}
+
+/* Hero Section */
+.carhome {
+     position: relative;
+     width: 100%;
+     height: 90vh;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+/* Background Video */
+.bg-video {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     filter: brightness(50%) contrast(1.2);
+     z-index: -1;
+}
+
+/* Hero Title */
+.cartitle {
+     position: relative;
+     text-align: center;
+     color: #ffce00;
+}
+
+.cartitle h1 {
+     font-size: 50px;
+     color: #ffce00;
+     font-family: "Merienda", serif;
+     font-weight: bold;
+     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.cartitle p {
+     font-size: 24px;
+     font-weight: 500;
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+     font-family: "Merienda", serif;
+}
+
+/* Rental Benefits */
+.rental-benefits {
+     text-align: center;
+     padding: 80px 20px;
+     background: #f5f5f5;
+}
+
+.rental-benefits h2 {
+     font-size: 38px;
+     margin-bottom: 35px;
+}
+
+.benefits-container {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 30px;
+}
+
+.benefit {
+     max-width: 280px;
+     text-align: center;
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease-in-out;
+}
+
+.benefit:hover {
+     transform: translateY(-5px);
+}
+
+.benefit img {
+     width: 180px;
+     height: 160px;
+     border-radius: 10px;
+}
+
+.benefit h3 {
+     font-size: 22px;
+     margin: 15px 0 10px;
+}
+
+.benefit p {
+     font-size: 16px;
+     color: #555;
+}
+
+/* Featured Cars Section */
+.featured-cars {
+     text-align: center;
+     padding: 80px 50px;
+     background: #fff;
+}
+
+.featured-cars h2 {
+     font-size: 38px;
+     margin-bottom: 35px;
+     color: #333;
+}
+
+.car-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 50px;
+     max-width: 1300px;
+     margin: auto;
+}
+
+.car-card {
+     background: #f9f9f9;
+     padding: 25px;
+     border-radius: 12px;
+     text-align: center;
+     /* width: 320px; */
+     width: 20%;
+     height: 350px;
+     transition: all 0.4s ease;
+     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.car-card:hover {
+     transform: scale(1.07);
+     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.car-card img {
+     width: 100%;
+     /* height: 160px; */
+     border-radius: 12px;
+     object-fit: cover;
+}
+
+.car-card h3 {
+     font-size: 22px;
+     margin: 15px 0 10px;
+     color: #444;
+}
+
+.car-card p {
+     font-size: 14px;
+     color: #777;
+     margin-bottom: 15px;
+}
+
+.car-card button {
+     padding: 12px 18px;
+     background: #ffce00;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     font-size: 16px;
+     font-weight: bold;
+     transition: background 0.3s;
+}    
+
+.car-card a {
+     text-decoration: none;
+     color: black;
+}
+
+.car-card button:hover {
+     background: #e0b200;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+     .car-card {
+          width: 90%;
+     }
+
+     .featured-cars h2 {
+          font-size: 28px;
+     }
+}
+
+/* About Us */
+.about-us {
+     background: linear-gradient(135deg, #ffffff, #ffffff);
+     color: white;
+     padding: 100px 20px;
+     text-align: center;
+     position: relative;
+     overflow: hidden;
+     height: 70vh;
+}
+
+/* Floating Shapes for Decoration */
+.about-us::before,
+.about-us::after {
+     content: "";
+     position: absolute;
+     width: 150px;
+     height: 150px;
+     background: rgba(2, 2, 2, 0.1);
+     border-radius: 50%;
+     opacity: 0.4;
+     z-index: 0;
+}
+
+.about-us::before {
+     top: 10%;
+     left: -50px;
+}
+
+.about-us::after {
+     bottom: 10%;
+     right: -50px;
+}
+
+/* Container */
+.about-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 60px;
+     flex-wrap: wrap;
+     position: relative;
+     z-index: 1;
+     animation: fadeIn 1s ease-in-out;
+}
+
+/* Image Section */
+.about-image img {
+     width: 420px;
+     border-radius: 15px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+     transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+     transform: scale(1.05);
+}
+
+/* Content Section */
+.about-content {
+     max-width: 600px;
+     text-align: left;
+}
+
+.about-content h2 {
+     font-size: 42px;
+     /* margin-bottom: 20px; */
+     background: linear-gradient(90deg, #ffce00, #ff7f00);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+     font-size: 18px;
+     line-height: 1.8;
+     color: black;
+}
+
+/* Read More Button */
+.about-content .btn {
+     display: inline-block;
+     margin-top: 20px;
+     padding: 12px 24px;
+     background: #ffce00;
+     color: black;
+     font-size: 18px;
+     font-weight: bold;
+     border-radius: 8px;
+     transition: 0.3s;
+     text-decoration: none;
+}
+
+.about-content .btn:hover {
+     background: #e0b200;
+     transform: translateY(-3px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+          transform: translateY(40px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+
+/* Contact Us Section */
+#contact-car {
+     margin-top: 90px;
+     padding: 50px 50px;
+     background: #f8f9fa;
+     animation: fadeIn 2s;
+     border-radius: 10px;
+     /* margin: 20px; */
+height: auto;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+}
+
+/* Title Styling */
+.contact-title {
+     font-size: 36px;
+     font-family: "Courgette", cursive;
+     color: #343a40;
+     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+     animation: slideInDown 1.2s ease-in-out;
+     text-align: center;
+     margin-top:-70px;
+}
+
+/* Flexbox Layout */
+.contact-container {
+     display: flex;
+     flex-direction: row;
+     justify-self: center;
+     justify-content: center;
+     align-items: center;
+     padding-bottom: 50px;
+     /* flex-wrap:wrap; */
+}
+
+/* Contact Form */
+.left-side {
+     flex: 1;
+     max-width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     animation: slideInLeft 1s ease-in-out;
+     /* padding: 10px; */
+}
+
+form {
+     background: white;
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     width: 100%;
+     max-width: 450px;
+}
+
+form input,
+form textarea {
+     width: 90%;
+     margin: 10px 0;
+     padding: 12px;
+     border: 2px solid #274768;
+     border-radius: 8px;
+     font-size: 16px;
+     transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+     border: 2px solid #ffdd57;
+     box-shadow: 0 4px 10px rgba(255, 221, 87, 0.3);
+     outline: none;
+}
+
+/* Contact Button */
+.contact-btn {
+     background: #007bff;
+     color: white;
+     padding: 12px 25px;
+     border: none;
+     cursor: pointer;
+     font-size: 18px;
+     border-radius: 8px;
+     transition: 0.3s;
+     width: 100%;
+}
+
+.contact-btn:hover {
+     background: #0056b3;
+     transform: scale(1.05);
+}
+
+/* Right Side (Image) */
+.right-side {
+     flex: 1;
+     max-width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     animation: slideInRight 1s ease-in-out;
+}
+
+.contact-container img {
+     width: 390px;
+     height: 325px;
+     max-width: 450px;
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     transition: transform 0.5s;
+}
+
+.contact-container img:hover {
+     transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+     0% {
+          opacity: 0;
+     }
+
+     100% {
+          opacity: 1;
+     }
+}
+
+@keyframes slideInLeft {
+     from {
+          opacity: 0;
+          transform: translateX(-50px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateX(0);
+     }
+}
+
+@keyframes slideInRight {
+     from {
+          opacity: 0;
+          transform: translateX(50px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateX(0);
+     }
+}
+
+@keyframes slideInDown {
+     from {
+          opacity: 0;
+          transform: translateY(-50px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+
+/* Footer */
+footer {
+     background: #343a40;
+     color: white;
+     padding: 15px;
+     margin-top: 20px;
+     font-size: 14px;
+     animation: fadeIn 2s;
+     text-align: center;
+     /* position:sticky; */
+}

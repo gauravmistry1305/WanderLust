@@ -1,0 +1,239 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+     background: #007bff;
+     padding: 10px 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     transition: 0.3s;
+}
+
+/* .navbar:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+} */
+
+.logo {
+     font-size: 34px;
+     font-family: "Courgette", cursive;
+     color: #fff200;
+     cursor: pointer;
+     transition: transform 0.3s;
+}
+
+.logo:hover {
+     transform: rotate(5deg) scale(1.1);
+}
+
+.navbar ul {
+     list-style: none;
+     display: flex;
+     gap: 15px;
+     padding: 0;
+}
+
+.navbar ul li a {
+     color: white;
+     text-decoration: none;
+     font-size: 15px;
+     font-family: "Merienda", cursive;
+     transition: 0.3s;
+     position: relative;
+}
+
+.navbar ul li a:hover {
+     color: #ffdd57;
+     text-decoration: none;
+     transform: scale(1.1);
+}
+
+/* Button Styling */
+.btn {
+     background: #ffdd57;
+     color: #343a40;
+     padding: 10px 20px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: 0.3s;
+}
+
+.btn:hover {
+     background: #54626f;
+     color: #ffdd57;
+     transform: scale(1.1);
+}
+
+ 
+.container {
+     width: 90%;
+     margin: 20px auto;
+     padding: 20px;
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.destination-heading {
+     text-align: center;
+     font-size: 2.5em;
+     color: #333;
+     margin-bottom: 20px;
+}
+ 
+/* Grid Layout */
+.grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     gap: 20px;
+}
+ 
+/* Individual Destination Card Styles */
+.destination {
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     text-align: center;
+     padding: 15px;
+}
+ 
+.destination:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+ 
+.destination img {
+     width: 100%;
+     height: 200px;
+     border-radius: 8px;
+     margin-bottom: 15px;
+}
+ 
+/* Title Styling */
+.destination h3 {
+     font-size: 15px;
+     color: #333;
+     margin-bottom: 10px;
+}
+ 
+/* Price Styling */
+/* .price {
+     font-size: 1.2em;
+     color: #ff5722;
+     font-weight: bold;
+} */
+
+
+/* Modal Styles */
+.modal {
+     display: none;
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     align-items: center;
+     justify-content: center;
+}
+
+.modal-content {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     width: 50%;
+     text-align: justify;
+     position: relative;
+}
+.modal-content a{
+     text-decoration: none;
+     color: #ffffff;
+     background: linear-gradient(135deg, #2d07e8, #00ff51);
+     border-radius: 5px;
+     padding: 5px 5px;
+     font-weight: bold;
+     font-size: 15px;
+     margin-top: 10px;
+     display: inline-block;
+}
+
+.modal img {
+     width: 100%;
+     max-height: 300px;
+     border-radius: 5px;
+}
+
+.close {
+     position: absolute;
+     top: 3px;
+     right: 3px;
+     font-size: 30px;
+     cursor: pointer;
+}
+
+/* Grid Layout */
+.grid {
+     display: flex;
+     flex-wrap: wrap;
+     /* gap: 20px; */
+     justify-content: center;
+}
+
+.destination {
+     cursor: pointer;
+     text-align: center;
+     padding: 10px;
+     border-radius: 10px;
+     transition: transform 0.3s ease-in-out;
+}
+
+.destination:hover {
+     transform: scale(1.05);
+}
+
+.destination img {
+     width: 250px;
+     height: 180px;
+     border-radius: 10px;
+     object-fit: cover;
+}
+
+.destination h3 {
+     margin-top: 10px;
+     font-size: 15px;
+}
+ 
+/* Responsive Design */
+@media (max-width: 768px) {
+     h2 {
+         font-size: 2em;
+     }
+ 
+     .destination h3 {
+         font-size: 1.4em;
+     }
+ 
+     .price {
+         font-size: 1.1em;
+     }
+}
