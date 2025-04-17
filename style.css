@@ -73,7 +73,7 @@ body {
      flex-direction: column;
      text-align: center;
      background: url('img/img1.jpg') center/cover no-repeat;
-     animation: bgSlide 20s infinite alternate ease-in-out;
+     animation: bgSlide 15s infinite alternate ease-in-out;
      position: relative;
      perspective: 1000px;
 }
@@ -111,7 +111,7 @@ body {
 .home-wrapper p {
      font-size: 1.5rem;
      margin-top: 1rem;
-     color: #ffffffc0;
+     color: white;
      animation: fadeInUp 2s ease-in-out;
 }
 
@@ -135,7 +135,43 @@ body {
      }
 }
 
+#destinations {
+     padding: 4rem 2rem;
+     text-align: center;
+}
+
+#packages {
+     padding: 4rem 2rem;
+     text-align: center;
+}
+
+.md-btn{
+     color: black;
+     font-weight: 500;
+     border-radius: 10px;
+     padding: 0.7rem 1rem;
+     background: #fff200;
+     cursor: pointer;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-weight: 500;
+     font-size: 15px;
+}
+
+
+.mp-btn{
+     color: black;
+     font-weight: 500;
+     border-radius: 10px;
+     padding: 0.7rem 1rem;
+     background: #fff200;
+     cursor: pointer;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-weight: 500;
+     font-size: 15px;
+}
 /* ==== Destination & Package Cards ==== */
+
+
 .destination-grid,
 .package-grid {
      display: grid;
