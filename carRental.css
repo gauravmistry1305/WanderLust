@@ -14,7 +14,7 @@ body {
 
 /* Navbar */
 .navbar {
-     background:#213638dd;
+     background: #007bff;
      padding: 10px 20px;
      display: flex;
      align-items: center;
@@ -24,8 +24,6 @@ body {
      top: 0;
      z-index: 1000;
      transition: 0.3s;
-     border-bottom-left-radius: 5px;
-     border-bottom-right-radius: 5px;
 }
 
 /* .navbar:hover {

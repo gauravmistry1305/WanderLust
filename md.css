@@ -1,241 +1,261 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* General Styles */
-body {
-     font-family: Arial, sans-serif;
+/* ==== Global Styles ==== */
+* {
      margin: 0;
      padding: 0;
-     background-color: #f4f4f4;
+     box-sizing: border-box;
+     scroll-behavior: smooth;
+     font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar */
+body {
+     background: linear-gradient(120deg, #1b1b2f, #162447);
+     color: #fff;
+     overflow-x: hidden;
+}
+
+/* ==== Navbar ==== */
 .navbar {
-     background:#213638dd;
-     padding: 10px 20px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
      position: sticky;
      top: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 2rem;
+     background: rgba(255, 255, 255, 0.05);
+     -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
      z-index: 1000;
-     transition: 0.3s;
-     border-bottom-left-radius: 5px;
-     border-bottom-right-radius: 5px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+     flex-wrap: wrap;
 }
 
-/* .navbar:hover {
-    background: #0056b3;
-    transform: scale(1.02);
-} */
-
-.logo {
-     font-size: 34px;
-     font-family: "Courgette", cursive;
+.navbar .logo {
+     font-size: 2rem;
+     font-weight: bold;
      color: #fff200;
-     cursor: pointer;
-     transition: transform 0.3s;
-}
-
-.logo:hover {
-     transform: rotate(5deg) scale(1.1);
+     text-shadow: 2px 2px #000;
 }
 
 .navbar ul {
      list-style: none;
      display: flex;
-     gap: 15px;
-     padding: 0;
+     gap: 1.2rem;
+     flex-wrap: wrap;
+     margin-top: 0.5rem;
 }
 
 .navbar ul li a {
+     text-decoration: none;
      color: white;
-     text-decoration: none;
-     font-size: 15px;
-     font-family: "Merienda", cursive;
-     transition: 0.3s;
+     font-weight: 700;
      position: relative;
-}
-
-.navbar ul li a:hover {
-     color: #ffdd57;
-     text-decoration: none;
-     transform: scale(1.1);
-}
-
-/* Button Styling */
-.btn {
-     background: #ffdd57;
-     color: #343a40;
-     padding: 10px 20px;
-     border-radius: 5px;
-     text-decoration: none;
-     font-weight: bold;
      transition: 0.3s;
 }
 
-.btn:hover {
-     background: #54626f;
-     color: #ffdd57;
-     transform: scale(1.1);
+.navbar ul li a::after {
+     content: "";
+     position: absolute;
+     width: 0;
+     height: 2px;
+     background: #fff200;
+     bottom: -5px;
+     left: 0;
+     transition: 0.3s;
 }
 
- 
+.navbar ul li a:hover::after {
+     width: 100%;
+}
+
+/* ==== Destination Section ==== */
 .container {
-     width: 90%;
-     margin: 20px auto;
-     padding: 20px;
-     background-color: #fff;
-     border-radius: 8px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
- 
-.destination-heading {
+     padding: 3rem 2rem;
      text-align: center;
-     font-size: 2.5em;
-     color: #333;
-     margin-bottom: 20px;
 }
- 
-/* Grid Layout */
+
+.destination-heading {
+     font-size: 2.5rem;
+     margin-bottom: 2rem;
+     color: #fff200;
+     text-shadow: 2px 2px #000;
+     animation: fadeInDown 1.5s ease;
+}
+
 .grid {
      display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-     gap: 20px;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+     margin-top: 2rem;
 }
- 
-/* Individual Destination Card Styles */
+
+/* ==== Destination Cards ==== */
 .destination {
-     background-color: #fff;
-     border: 1px solid #ddd;
-     border-radius: 8px;
+     background: rgba(255, 255, 255, 0.05);
+     border-radius: 15px;
      overflow: hidden;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
      text-align: center;
-     padding: 15px;
+     transition: transform 0.4s ease, box-shadow 0.4s ease;
+     transform-style: preserve-3d;
+     perspective: 1000px;
 }
- 
+
 .destination:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     transform: rotateY(10deg) scale(1.05);
+     box-shadow: 0 20px 30px rgba(0, 255, 255, 0.4);
 }
- 
+
 .destination img {
      width: 100%;
      height: 200px;
-     border-radius: 8px;
-     margin-bottom: 15px;
+     object-fit: cover;
+     transition: transform 0.4s ease;
 }
- 
-/* Title Styling */
+
+.destination:hover img {
+     transform: scale(1.1);
+}
+
 .destination h3 {
-     font-size: 15px;
-     color: #333;
-     margin-bottom: 10px;
+     font-size: 1.2rem;
+     padding: 1rem;
+     color: #fff;
 }
- 
-/* Price Styling */
-/* .price {
-     font-size: 1.2em;
-     color: #ff5722;
-     font-weight: bold;
-} */
 
-
-/* Modal Styles */
+/* ==== Modal ==== */
 .modal {
      display: none;
      position: fixed;
-     z-index: 1000;
-     left: 0;
      top: 0;
+     left: 0;
      width: 100%;
      height: 100%;
-     background-color: rgba(0, 0, 0, 0.8);
-     align-items: center;
+     background: rgba(0, 0, 0, 0.8);
      justify-content: center;
+     align-items: center;
+     z-index: 2000;
+     animation: fadeIn 0.5s ease-in-out;
 }
 
 .modal-content {
-     background: white;
-     padding: 20px;
-     border-radius: 10px;
-     width: 50%;
-     text-align: justify;
+     background: #1f1f2e;
+     padding: 2rem;
+     border-radius: 15px;
+     max-width: 600px;
+     color: #fff;
+     transform: scale(0.8);
+     animation: popUp 0.3s forwards;
      position: relative;
-}
-.modal-content a{
-     text-decoration: none;
-     color: #ffffff;
-     background: linear-gradient(135deg, #2d07e8, #00ff51);
-     border-radius: 5px;
-     padding: 5px 5px;
-     font-weight: bold;
-     font-size: 15px;
-     margin-top: 10px;
-     display: inline-block;
-}
-
-.modal img {
-     width: 100%;
-     max-height: 300px;
-     border-radius: 5px;
-}
-
-.close {
-     position: absolute;
-     top: 3px;
-     right: 3px;
-     font-size: 30px;
-     cursor: pointer;
-}
-
-/* Grid Layout */
-.grid {
-     display: flex;
-     flex-wrap: wrap;
-     /* gap: 20px; */
-     justify-content: center;
-}
-
-.destination {
-     cursor: pointer;
      text-align: center;
-     padding: 10px;
+}
+
+.modal-content img {
+     width: 100%;
+     height: auto;
      border-radius: 10px;
-     transition: transform 0.3s ease-in-out;
+     margin-bottom: 1rem;
 }
 
-.destination:hover {
-     transform: scale(1.05);
+.modal-content h3 {
+     margin-bottom: 0.5rem;
+     color: #fff200;
 }
 
-.destination img {
-     width: 250px;
-     height: 180px;
+.modal-content p {
+     margin-bottom: 1rem;
+     line-height: 1.5;
+}
+
+.modal-content a {
+     display: inline-block;
+     padding: 0.5rem 1rem;
+     background: #fff200;
+     color: #000;
      border-radius: 10px;
-     object-fit: cover;
+     font-weight: bold;
+     text-decoration: none;
+     transition: background 0.3s;
 }
 
-.destination h3 {
-     margin-top: 10px;
-     font-size: 15px;
+.modal-content a:hover {
+     background: #0ff;
+     box-shadow: 0 0 10px #0ff;
 }
- 
-/* Responsive Design */
+
+.modal-content .close {
+     position: absolute;
+     top: 10px;
+     right: 20px;
+     font-size: 2rem;
+     cursor: pointer;
+     color: #fff;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+     }
+     to {
+          opacity: 1;
+     }
+}
+
+@keyframes popUp {
+     to {
+          transform: scale(1);
+     }
+}
+
+@keyframes fadeInDown {
+     from {
+          transform: translateY(-30px);
+          opacity: 0;
+     }
+     to {
+          transform: translateY(0);
+          opacity: 1;
+     }
+}
+
+/* ==== Responsive Media Queries ==== */
 @media (max-width: 768px) {
-     h2 {
-         font-size: 2em;
+     .navbar {
+          flex-direction: column;
+          align-items: flex-start;
      }
- 
+
+     .navbar ul {
+          flex-direction: column;
+          width: 100%;
+          padding-left: 0;
+     }
+
+     .navbar ul li {
+          width: 100%;
+     }
+
+     .destination-heading {
+          font-size: 2rem;
+     }
+
+     .modal-content {
+          margin: 1rem;
+          width: 90%;
+     }
+}
+
+@media (max-width: 480px) {
      .destination h3 {
-         font-size: 1.4em;
+          font-size: 1rem;
      }
- 
-     .price {
-         font-size: 1.1em;
+
+     .modal-content h3 {
+          font-size: 1.3rem;
+     }
+
+     .modal-content p {
+          font-size: 0.95rem;
      }
 }

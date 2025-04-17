@@ -11,6 +11,8 @@ include 'db.php'; // Include the database connection file
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>WanderLust - Travel Agency</title>
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
 </head>
 
 <body>
@@ -246,6 +248,12 @@ include 'db.php'; // Include the database connection file
           }
      };
      </script>
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+     AOS.init();
+     </script>
+
 
 </body>
 
